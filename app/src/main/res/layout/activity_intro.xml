@@ -9,26 +9,26 @@
         android:layout_height="wrap_content"
         android:text="Cal1"
         android:textAllCaps="false"
-        android:textSize="30dp"/>
+        android:textSize="20dp"/>
     <Button
         android:id="@+id/btn_go2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cal2"
         android:textAllCaps="false"
-        android:textSize="30dp"/>
+        android:textSize="20dp"/>
     <Button
         android:id="@+id/btn_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cal_my"
         android:textAllCaps="false"
-        android:textSize="30dp"/>
+        android:textSize="20dp"/>
     <Button
         android:id="@+id/btn_reserve"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Reservation"
         android:textAllCaps="false"
-        android:textSize="30dp"/>
+        android:textSize="20dp"/>
 </LinearLayout>

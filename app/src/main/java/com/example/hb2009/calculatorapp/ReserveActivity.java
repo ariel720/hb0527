@@ -2,6 +2,7 @@ package com.example.hb2009.calculatorapp;
 
 import android.graphics.Color;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class ReserveActivity extends AppCompatActivity {
+    String pick_date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,15 @@ public class ReserveActivity extends AppCompatActivity {
 
         TextView tv_today = (TextView) findViewById(R.id.tv_today);
         tv_today.setText(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));//오늘날짜
+
+
+        initView();
+
+
+
+    }
+
+    public void initView(){
 
         final Chronometer cm_1 = (Chronometer) findViewById(R.id.cm_1);
         final CalendarView cv_1 = (CalendarView) findViewById(R.id.cv_1);
@@ -56,20 +67,26 @@ public class ReserveActivity extends AppCompatActivity {
                 cm_1.stop();
                 cm_1.setTextColor(Color.BLUE);
 
-                java.util.Calendar curDate = java.util.Calendar.getInstance();
+                String[] arr = pick_date.split("-");
 
-                curDate.setTimeInMillis(cv_1.getDate());
-                //Toast.makeText(ReserveActivity.this,Long.toString(cv_1.getDate()),Toast.LENGTH_SHORT).show();
-
-                tv_year.setText(Integer.toString(curDate.get(Calendar.YEAR)));
-                tv_month.setText(Integer.toString(curDate.get(Calendar.MONTH)));
-                tv_date.setText(Integer.toString(curDate.get(Calendar.DATE)));
+                tv_year.setText(arr[0]);
+                tv_month.setText(arr[1]);
+                tv_date.setText(arr[2]);
 
                 tv_hour.setText(Integer.toString(tp_1.getHour()));
                 tv_min.setText(Integer.toString(tp_1.getMinute()));
-
             }
         });
+        
+        //선택한 날짜 가져오기
+        cv_1.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                pick_date = year+"-"+(month+1)+"-"+dayOfMonth;
+            }
+        });
+
+
 
         findViewById(R.id.rb_cal).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +103,6 @@ public class ReserveActivity extends AppCompatActivity {
                 cv_1.setVisibility(View.INVISIBLE);
             }
         });
-
     }
 
 }
