@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FastActivity" />
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".ReserveActivity"/>
     </application>
 
 </manifest>
