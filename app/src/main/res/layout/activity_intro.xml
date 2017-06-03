@@ -17,4 +17,11 @@
         android:text="Cal2"
         android:textAllCaps="false"
         android:textSize="30dp"/>
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cal3"
+        android:textAllCaps="false"
+        android:textSize="30dp"/>
 </LinearLayout>

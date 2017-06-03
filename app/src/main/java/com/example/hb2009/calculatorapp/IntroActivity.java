@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class IntroActivity extends AppCompatActivity implements View.OnClickListener{
     Button btn_go;
     Button btn_go2;
+    Button btn_test;
     Context context;
 
     @Override
@@ -26,6 +27,9 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
         btn_go2 = (Button) findViewById(R.id.btn_go2);
         btn_go2.setOnClickListener(this);
 
+        btn_test = (Button) findViewById(R.id.btn_test);
+        btn_test.setOnClickListener(this);
+
     }
 
     @Override
@@ -39,6 +43,10 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
             case R.id.btn_go2:
                 startActivity(new Intent(context, FastActivity.class));
+                break;
+
+            case R.id.btn_test:
+                startActivity(new Intent(context, Main2Activity.class));
                 break;
         }
 
