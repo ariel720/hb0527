@@ -77,7 +77,7 @@ public class ReserveActivity extends AppCompatActivity {
                 tv_min.setText(Integer.toString(tp_1.getMinute()));
             }
         });
-        
+
         //선택한 날짜 가져오기
         cv_1.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -85,8 +85,6 @@ public class ReserveActivity extends AppCompatActivity {
                 pick_date = year+"-"+(month+1)+"-"+dayOfMonth;
             }
         });
-
-
 
         findViewById(R.id.rb_cal).setOnClickListener(new View.OnClickListener() {
             @Override

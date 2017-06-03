@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".FastActivity" />
         <activity android:name=".Main2Activity" />
-        <activity android:name=".ReserveActivity"/>
+        <activity android:name=".ReserveActivity" />
+        <activity android:name=".TimerActivity"></activity>
     </application>
 
 </manifest>

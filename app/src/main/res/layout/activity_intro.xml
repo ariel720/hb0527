@@ -31,4 +31,11 @@
         android:text="Reservation"
         android:textAllCaps="false"
         android:textSize="20dp"/>
+    <Button
+        android:id="@+id/btn_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Timer"
+        android:textAllCaps="false"
+        android:textSize="20dp"/>
 </LinearLayout>

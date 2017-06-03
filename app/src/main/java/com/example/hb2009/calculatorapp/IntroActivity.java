@@ -13,6 +13,7 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
     Button btn_go2;
     Button btn_test;
     Button btn_reserve;
+    Button btn_timer;
     Context context;
 
     @Override
@@ -33,6 +34,9 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
         btn_reserve = (Button) findViewById(R.id.btn_reserve);
         btn_reserve.setOnClickListener(this);
+
+        btn_timer = (Button) findViewById(R.id.btn_timer);
+        btn_timer.setOnClickListener(this);
 
     }
 
@@ -55,6 +59,10 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
             case R.id.btn_reserve:
                 startActivity(new Intent(context, ReserveActivity.class));
+                break;
+
+            case R.id.btn_timer:
+                startActivity(new Intent(context, TimerActivity.class));
                 break;
         }
 
